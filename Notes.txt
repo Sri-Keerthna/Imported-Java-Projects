@@ -1,0 +1,28 @@
+Step 1: Create Database Table
+use Employee.sql and create the table
+
+Step 2: Create Dynamic Web Project in Maven (***Do not run this***)
+To create dynamic web project with maven, navigate to the folder where you want to create the project and execute following command in Command Prompt.
+
+mvn archetype:generate -DgroupId=com.jwt.spring -DartifactId=SpringMVCHibernateCRUD -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+
+Step 3: Convert Maven Project to support Eclipse (***Do not run this***)
+To make maven project support eclipse IDE navigate to project folder and type followingcommand in terminal window.
+
+mvn eclipse:eclipse -Dwtpversion=2.0
+
+Step 4: Import the project 
+Now Import the project into eclipse (extract the SpringMVCHibernateCRUD.zip - do not give the folder name "SpringMVCHibernateCRUD" during extraction)
+
+Step 5: change the values in following file
+src/main/resources/application.properties
+    database.url=jdbc:mysql://localhost:3306/mydb
+    database.password=root
+
+Step 6: Right click on SpringMVCHibernateCRUD project in eclipse then "Run as" then "Run on server"
+Remove previous project running and have only "SpringMVCHibernateCRUD"
+
+Step 7: Browser with http://localhost:8080/SpringMVCHibernateCRUD/ URL will be opened
+(Increase the timeout in the Tomcat server configuration if not started.. Goto "Server" window and double click on the Tomcat v8.0 server at locahost then expand the timeouts section and enter "600" for Start and "300" for Stop. Then again go for Step 7)
+
